@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     else
       redirect to '/users/create'
     end
-    #binding.pry
   end
 
   get '/login' do
@@ -29,7 +28,4 @@ class UsersController < ApplicationController
       redirect to '/login'
     end
   end
-
-
-
 end
