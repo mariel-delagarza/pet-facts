@@ -9,7 +9,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    @pet = current_user.pets.new(
+    @pet = current_user.pets.create(
       name: params[:name],
       species: params[:species],
       breed: params[:breed],
@@ -25,16 +25,13 @@ class PetsController < ApplicationController
       food_serving: params[:food_serving],
       feedings_per_day: params[:feedings_per_day],
       comments: params[:comments])
+    #  binding.pry
     if @pet.save
       redirect to '/pets/#{@pet.id}'
     else
       redirect to '/pets/new'
     end
   end
-
-#  get '/pets/show' do
-#    erb :'/pets/show'
-#  end
 
   get '/pets/:id' do
     @pet = Pet.find_by_id(params[:id])
