@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  get '/signup' do
+  get '/users/create' do
     erb :'/users/create'
   end
 
@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
+      #binding.pry
       redirect to '/pets'
     else
       redirect to '/login'
