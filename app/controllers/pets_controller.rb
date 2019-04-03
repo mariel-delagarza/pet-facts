@@ -9,7 +9,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    @pet = Pet.create(
+    @pet = Pet.new(
         name: params[:name],
         species: params[:species],
         breed: params[:breed],
