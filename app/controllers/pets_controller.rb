@@ -25,9 +25,8 @@ class PetsController < ApplicationController
       food_serving: params[:food_serving],
       feedings_per_day: params[:feedings_per_day],
       comments: params[:comments])
-    #  binding.pry
     if @pet.save
-      redirect to '/pets/#{@pet.id}'
+      redirect to "/pets/#{@pet.id}"
     else
       redirect to '/pets/new'
     end
