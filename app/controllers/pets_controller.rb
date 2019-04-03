@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
 
-  get '/pets/index' do
+  get '/pets' do
     erb :'/pets/index'
   end
 
@@ -32,9 +32,9 @@ class PetsController < ApplicationController
     end
   end
 
-  get '/pets/show' do
-    erb :'/pets/show'
-  end
+#  get '/pets/show' do
+#    erb :'/pets/show'
+#  end
 
   get '/pets/:id' do
     @pet = Pet.find_by_id(params[:id])
