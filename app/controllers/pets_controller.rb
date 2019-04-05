@@ -45,7 +45,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
-    @pet = Pet.find(params[:id])
+    @pet = current_user.pets.find_by_id(params[:id])
     @pet.name = params[:name]
     @pet.species = params[:species]
     @pet.breed = params[:breed]
