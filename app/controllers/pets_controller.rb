@@ -1,6 +1,8 @@
 class PetsController < ApplicationController
 
   get '/pets' do
+    @user = current_user
+    @pets = @user.pets.all
     erb :'/pets/index'
   end
 
@@ -36,5 +38,7 @@ class PetsController < ApplicationController
     @pet = current_user.pets.find_by_id(params[:id])
     erb :'/pets/show'
   end
+
+
 
 end
