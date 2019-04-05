@@ -34,11 +34,39 @@ class PetsController < ApplicationController
     end
   end
 
+
+
   get '/pets/:id' do
     @pet = current_user.pets.find_by_id(params[:id])
     erb :'/pets/show'
   end
 
+  get '/pets/:id/edit' do
+    @pet = current_user.pets.find_by_id(params[:id])
+    erb :'/pets/edit'
+  end
+
+  patch 'pets/:id' do
+    @pet = Pet.find(params[:id])
+    @pet.name = params[:name]
+    @pet.species = params[:species]
+    @pet.breed = params[:breed]
+    @pet.microchip_number = params[:microchip_number]
+    @pet.microchip_registry = params[:microchip_registry]
+    @pet.vet_name = params[:vet_name]
+    @pet.vet_phone = params[:vet_phone]
+    @pet.vaccinations = params[:vaccinations]
+    @pet.flea_treatment_type = params[:flea_treatment_type]
+    @pet.heartworm_treatment_type = params[:heartworm_treatment_type]
+    @pet.allergies = params[:allergies]
+    @pet.food_brand = params[:food_brand]
+    @pet.food_serving = params[:food_serving]
+    @pet.feedings_per_day = params[:feedings_per_day]
+    @pet.comments = params[:comments]
+    @pet.user_id = current_user.id
+    @pet.save
+    redirect to "/pets/#{@pet.id}"
+  end
 
 
 end
