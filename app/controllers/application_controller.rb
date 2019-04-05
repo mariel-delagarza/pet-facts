@@ -1,3 +1,4 @@
+
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -11,11 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    if current_user
-      redirect "/pets"
-    else
-      erb :welcome
-    end
+    erb :welcome
   end
 
   helpers do

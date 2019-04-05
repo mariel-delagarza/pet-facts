@@ -1,8 +1,7 @@
 class PetsController < ApplicationController
 
   get '/pets' do
-    @user = current_user
-    @pets = @user.pets.all
+    @pets = current_user.pets.all
     erb :"/pets/index"
   end
 
