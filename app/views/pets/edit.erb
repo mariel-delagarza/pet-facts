@@ -1,7 +1,7 @@
 <h1>This page will let you update your pet's profile</h1>
 
-<form action="/pets/<%= @pet.id %>" method="post">
-<input id="hidden" type="hidden" name="_method" value="patch">
+<form action="/pets/<%=@pet.id%>" method="post">
+<input type="hidden" name="_method" value="patch">
 
     <p>Here you can edit the profile for <%=@pet.name%></p>
 

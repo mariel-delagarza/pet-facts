@@ -3,11 +3,11 @@ class PetsController < ApplicationController
   get '/pets' do
     @user = current_user
     @pets = @user.pets.all
-    erb :'/pets/index'
+    erb :"/pets/index"
   end
 
   get '/pets/new' do
-    erb :'/pets/new'
+    erb :"/pets/new"
   end
 
   post '/pets' do
@@ -30,11 +30,9 @@ class PetsController < ApplicationController
     if @pet.save
       redirect to "/pets/#{@pet.id}"
     else
-      redirect to '/pets/new'
+      redirect to "/pets/new"
     end
   end
-
-
 
   get '/pets/:id' do
     @pet = current_user.pets.find_by_id(params[:id])
@@ -46,7 +44,7 @@ class PetsController < ApplicationController
     erb :'/pets/edit'
   end
 
-  patch 'pets/:id' do
+  patch '/pets/:id' do
     @pet = Pet.find(params[:id])
     @pet.name = params[:name]
     @pet.species = params[:species]
