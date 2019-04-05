@@ -11,7 +11,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    if current_user
+      redirect "/pets"
+    else
+      erb :welcome
+    end
   end
 
   helpers do
