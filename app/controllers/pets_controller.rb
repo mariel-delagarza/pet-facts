@@ -1,8 +1,12 @@
 class PetsController < ApplicationController
 
   get '/pets' do
-    @pets = current_user.pets.all
-    erb :"/pets/index"
+    if !logged_in?
+      redirect to "/"
+    else
+      @pets = current_user.pets.all
+      erb :"/pets/index"
+    end
   end
 
   get '/pets/new' do
