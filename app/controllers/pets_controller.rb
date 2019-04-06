@@ -38,8 +38,12 @@ class PetsController < ApplicationController
     end
 
   get '/pets/:id' do
-    @pet = current_user.pets.find_by_id(params[:id])
-    erb :'/pets/show'
+    if !logged_in?
+      redirect to "/"
+    else
+      @pet = current_user.pets.find_by_id(params[:id])
+      erb :'/pets/show'
+    end
   end
 
   get '/pets/:id/edit' do
