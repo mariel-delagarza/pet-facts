@@ -5,12 +5,16 @@ class UsersController < ApplicationController
   end
 
   post '/users' do
-    @user = User.new(username: params[:username], email: params[:email], password: params[:password])
-    if @user.save
-      session[:user_id] = @user.id
-      redirect to '/pets'
+    if params[:username].empty? || params[:email].empty? || params[:password].empty?
+      redirect to "/users/create"
     else
-      redirect to '/users/create'
+      @user = User.new(username: params[:username], email: params[:email], password: params[:password])
+      if @user.save
+        session[:user_id] = @user.id
+        redirect to '/pets'
+      else
+        redirect to '/users/create'
+      end
     end
   end
 
