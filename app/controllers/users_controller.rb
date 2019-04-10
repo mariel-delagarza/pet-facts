@@ -5,9 +5,6 @@ class UsersController < ApplicationController
   end
 
   post '/users' do
-    if params[:username].empty? || params[:email].empty? || params[:password].empty?
-      redirect to "/users/create"
-    else
       @user = User.new(username: params[:username], email: params[:email], password: params[:password])
       if @user.save
         session[:user_id] = @user.id
@@ -16,7 +13,6 @@ class UsersController < ApplicationController
         redirect to '/users/create'
       end
     end
-  end
 
   get '/login' do
     erb :'/users/login'
