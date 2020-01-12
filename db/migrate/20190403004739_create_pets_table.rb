@@ -1,11 +1,11 @@
 class CreatePetsTable < ActiveRecord::Migration
   def change
     create_table :pets do |t|
-      t.string :name
-      t.string :species
-      t.string :breed
-      t.string :microchip_number
-      t.string :microchip_registry
+      #t.string :name
+      #t.string :species
+      #t.string :breed
+      #t.string :microchip_number
+      #t.string :microchip_registry
       #t.string :vet_name
       #t.string :vet_phone
       t.text :vaccinations
@@ -15,8 +15,8 @@ class CreatePetsTable < ActiveRecord::Migration
       #t.string :food_brand
       #t.string :food_serving
       #t.string :feedings_per_day
-      t.text :comments
-      t.integer :user_id
+      #t.text :comments
+      #t.integer :user_id
     end
   end
 end
