@@ -3,21 +3,24 @@
   <style>
     body {
       background-color: #eaebef;
-      background-image: url("https://images.unsplash.com/photo-1523626797181-8c5ae80d40c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+    } 
 
-    .container {
-      width: 500px;
-      margin-top: 17vh;
-      margin-left: 10vw;
-    }
-
-    .form-container {
+     #title {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
       font-family: 'Poppins', sans-serif;
-      font-size: 4vh;
-      padding-right: 50px;
+    }
+
+    #login-form {
+      height: 600px;
+      max-width: 580px;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background-image: url("https://images.unsplash.com/photo-1523626797181-8c5ae80d40c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .button {
@@ -30,28 +33,34 @@
       display: inline-block;
       font-size: 16px;
     }
+    
+    .input-field {
+      width: 100%;
+      opacity: .7;
+    }
 
   </style>
 </head>
 
 
-
-<h1 id="title">Log in to view your pet diary!</h1>
-
 <div id="container">
+  <h1 id="title">Log in to view your pet info</h1>
   <form id="login-form" action="/login" method = "POST">
     <div id="form-container">
       <label for="username" id="username">Username:</label>
-      <input type="text" id="username" name="username">
+      <br/>
+      <input type="text" id="username" name="username" class="input-field">
       <br/>
       <br/>
       <label for="password" id="password">Password:</label>
-      <input type="password" id="password" name="password">
+      <br/>
+      <input type="password" id="password" name="password" class="input-field">
       <br/>
       <br/>
       <input class="button" type="submit">
     </div>
   </form>
 </div>
+
 	<p>Or <a href="/users/create">Sign Up</a> if you don't have an account.</p>
   <p><a href="/">Back to the main page.</a></p>
