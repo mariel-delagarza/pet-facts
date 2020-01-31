@@ -12,7 +12,7 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    #login-form {
+    #form-container {
       height: 600px;
       max-width: 580px;
       padding: 20px;
@@ -32,8 +32,15 @@
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
+      width: 100%;
     }
-    
+
+    #other-button {
+      background-color: #eec2ff;
+      width: 32%;
+      opacity: .7;
+    }
+
     .input-field {
       width: 100%;
       opacity: .7;
@@ -45,8 +52,8 @@
 
 <div id="container">
   <h1 id="title">Log in to view your pet info</h1>
-  <form id="login-form" action="/login" method = "POST">
-    <div id="form-container">
+  <div id="form-container">
+    <form id="login-form" action="/login" method = "POST">
       <label for="username" id="username">Username:</label>
       <br/>
       <input type="text" id="username" name="username" class="input-field">
@@ -57,10 +64,15 @@
       <input type="password" id="password" name="password" class="input-field">
       <br/>
       <br/>
-      <input class="button" type="submit">
-    </div>
-  </form>
+      <input class="button" type="submit"> 
+    </form>
+    <br/>
+    <a class="button" id="other-button" href="/users/create">or create an account!</a>
+    <br/>
+    <br/>
+    <a class="button" id="other-button" href="/">go back to home page</a>
+  </div>
+
 </div>
 
-	<p>Or <a href="/users/create">Sign Up</a> if you don't have an account.</p>
-  <p><a href="/">Back to the main page.</a></p>
+	
