@@ -47,6 +47,11 @@
       padding: 20px;
     }
 
+    #feeding-info-container {
+      background-color: #ffb5fa;
+      padding: 20px;
+    }
+
   </style>
 </head>
 
@@ -119,28 +124,32 @@
         <br/>
         <br/>
       </div>
-      <h3>Feeding Information</h3>
-      <label class="label" for="food_brand">Food brand:</label>
       <br/>
-      <input class="field" type="text" id="food_brand" name="food_brand">
-      <br/>
-      <br/>
-      <label class="label" for="food_serving">Food serving:</label>
-      <br/>
-      <input class="field" type="text" id="food_serving" name="food_serving">
-      <br/>
-      <br/>
-      <label class="label" for="feedings_per_day">Feedings per day:</label>
-      <br/>
-      <input class="field" type="text" id="feedings_per_day" name="feedings_per_day">
-      <br/>
-      <br/>
-      <label class="label" for="comments">Comments:</label>
-      <br/>
-      <input class="field" type="text" id="comments" name="comments">
+      <div id="feeding-info-container">
+        <h3>Feeding Information</h3>
+        <label class="label" for="food_brand">Food brand:</label>
+        <br/>
+        <input class="field" type="text" id="food_brand" name="food_brand">
+        <br/>
+        <br/>
+        <label class="label" for="food_serving">Food serving:</label>
+        <br/>
+        <input class="field" type="text" id="food_serving" name="food_serving">
+        <br/>
+        <br/>
+        <label class="label" for="feedings_per_day">Feedings per day:</label>
+        <br/>
+        <input class="field" type="text" id="feedings_per_day" name="feedings_per_day">
+        <br/>
+        <br/>
+        <label class="label" for="comments">Comments:</label>
+        <br/>
+        <input class="field" type="text" id="comments" name="comments">
 
-      <input type="submit">
-      <br/>
+        <input type="submit">
+        <br/>
+        <br/>
+      </div>
       <br/>
   </form>
   <a class="button" href="/">Back to the main page</a> <a class="button" href="/pets/index">See all of your pets!</a>
