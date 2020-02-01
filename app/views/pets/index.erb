@@ -33,13 +33,13 @@
 </head>
 
 <div class="title">
-  <h1>This page will show you all your saved pets</h1>
+  <h1>All your saved pets</h1>
 </div>
 
 <div class="container">
+  <h3>Click on your pet's name to see their profile</h3>
   <% @pets.each do |pet| %>
-    <p><b>PET INFO:</p></b>
-    <p>Name: <a href = "/pets/<%= pet.id %>"><%=pet.name%></a></p>
+    <p><a href = "/pets/<%= pet.id %>"><%=pet.name%></a></p>
   <p><%end%>
   </br>
 
