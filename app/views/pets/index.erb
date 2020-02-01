@@ -16,17 +16,33 @@
       display: inline-block;
       font-size: 16px;
     }   
+
+    .title {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 580px;
+      max-height: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 
+<div class="title">
+  <h1>This page will show you all your saved pets</h1>
+</div>
 
-<h1>This page will show you all your saved pets</h1>
+<div class="container">
+  <% @pets.each do |pet| %>
+    <p><b>PET INFO:</p></b>
+    <p>Name: <a href = "/pets/<%= pet.id %>"><%=pet.name%></a></p>
+  <p><%end%>
+  </br>
 
-<% @pets.each do |pet| %>
-  <p><b>PET INFO:</p></b>
-  <p>Name: <a href = "/pets/<%= pet.id %>"><%=pet.name%></a></p>
-<p><%end%>
-</br>
-
-<a class="button" href="/pets/new">Create a profile for a new pet!</a>
-<a class="button" href="/logout">Logout</a>
+  <a class="button" href="/pets/new">Create a profile for a new pet!</a>
+  <a class="button" href="/logout">Logout</a>
+</div>
