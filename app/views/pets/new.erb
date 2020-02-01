@@ -23,7 +23,7 @@
     }
 
     .field {
-      width: 100%;
+      width: 95%;
     }
 
     .button {
@@ -37,6 +37,11 @@
       font-size: 16px;
     }
 
+    #basic-info-container {
+      background-color: #ffb0fe;
+      padding: 20px;
+    }
+
   </style>
 </head>
 
@@ -47,33 +52,34 @@
 
 <div class="container">
   <form action="/pets" method="POST">
-
-      <h3>Basic Information</h3>
-      <label class="label" for="name">Name:</label>
-      <br/>
-      <input class="field" type="text" id="name" name="name">
-      <br/>
-      <br/>
-      <label class="label" for="species">Species:</label>
-      <br/>
-      <input class="field" type="text" id="species" name="species">
-      <br/>
-      <br/>
-      <label class="label" for="breed">Breed:</label>
-      <br/>
-      <input class="field" type="text" id="breed" name="breed">
-      <br/>
-      <br/>
-      <label class="label" for="microchip_number">Microchip Number:</label>
-      <br/>
-      <input class="field" type="text" id="microchip_number" name="microchip_number">
-      <br/>
-      <br/>
-      <label class="label" for="microchip_registry">Microchip Registry:</label>
-      <br/>
-      <input class="field" type="text" id="microchip_registry" name="microchip_registry">
-      <br/>
-      <br/>
+      <div id="basic-info-container">
+        <h3>Basic Information</h3>
+        <label class="label" for="name">Name:</label>
+        <br/>
+        <input class="field" type="text" id="name" name="name">
+        <br/>
+        <br/>
+        <label class="label" for="species">Species:</label>
+        <br/>
+        <input class="field" type="text" id="species" name="species">
+        <br/>
+        <br/>
+        <label class="label" for="breed">Breed:</label>
+        <br/>
+        <input class="field" type="text" id="breed" name="breed">
+        <br/>
+        <br/>
+        <label class="label" for="microchip_number">Microchip Number:</label>
+        <br/>
+        <input class="field" type="text" id="microchip_number" name="microchip_number">
+        <br/>
+        <br/>
+        <label class="label" for="microchip_registry">Microchip Registry:</label>
+        <br/>
+        <input class="field" type="text" id="microchip_registry" name="microchip_registry">
+        <br/>
+        <br/>
+      </div>
       <h3>Health Information</h3>
       <label class="label" for="vet_name">Vet Name:</label>
       <br/>
