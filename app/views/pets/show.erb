@@ -40,11 +40,10 @@
 
 
 
-<p><a class="button" href="/pets/<%=@pet.id%>/edit">Edit the information for this pet!</a></p>
+<p><a class="button" href="/pets/<%=@pet.id%>/edit">Edit <%=@pet.name%>'s info</a></p>
 <p><form class="" action="/pets/<%= @pet.id %>" method="post">
   <input type="hidden" name="_method" value="DELETE">
-  <input class="button" type="submit" value="Delete this pet's profile">
+  <input class="button" type="submit" value="Delete <%=@pet.name%>'s profile">
 </form></p>
 <p><a class="button" href="/pets">See all of your pets!</a></p>
-<p><a class="button" href="/pets/new">Create a New Pet!</a></p>
-<p><a class="button" href="/">Back to main page</a></p>
+<p><a class="button" href="/pets/new">Create a profile for a new pet!</a></p>
