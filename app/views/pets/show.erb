@@ -40,7 +40,7 @@
 
 
 
-<p><a href="/pets/<%=@pet.id%>/edit">Edit the information for this pet!</a></p>
+<p><a class="button" href="/pets/<%=@pet.id%>/edit">Edit the information for this pet!</a></p>
 <p><form class="" action="/pets/<%= @pet.id %>" method="post">
   <input type="hidden" name="_method" value="DELETE">
   <input class="button" type="submit" value="Delete this pet's profile">
