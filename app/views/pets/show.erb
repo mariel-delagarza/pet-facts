@@ -23,6 +23,13 @@
       text-align: center;
     }
 
+    .container {
+      max-width: 580px;
+      max-height: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
   </style>
 </head>
 
@@ -30,22 +37,32 @@
   <h1>This is <%=@pet.name%>'s profile!</h1>
 </div>
 
-<p>Name: <%=@pet.name%></p>
-<p>Species: <%=@pet.species%></p>
-<p>Breed: <%=@pet.breed%></p>
-<p>Microchip Number: <%=@pet.microchip_number%></p>
-<p>Microchip Registry: <%=@pet.microchip_registry%></p>
-<p>Vet Name: <%=@pet.vet_name%></p>
-<p>Vet Phone: <%=@pet.vet_phone%></p>
-<p>Vaccinations: <%=@pet.vaccinations%></p>
-<p>Flea treatment type: <%=@pet.flea_treatment_type%></p>
-<p>Heartworm treatment type: <%=@pet.heartworm_treatment_type%></p>
-<p>Allergies: <%=@pet.allergies%></p>
-<p>Food brand: <%=@pet.food_brand%></p>
-<p>Food serving: <%=@pet.food_serving%></p>
-<p>Feedings per day: <%=@pet.feedings_per_day%></p>
-<p>Comments: <%=@pet.comments%></p>
-
+<div class="container">
+  <div class="basic-info-container">
+    <h3>Basic Information</h3>
+    <p>Name: <%=@pet.name%></p>
+    <p>Species: <%=@pet.species%></p>
+    <p>Breed: <%=@pet.breed%></p>
+    <p>Microchip Number: <%=@pet.microchip_number%></p>
+    <p>Microchip Registry: <%=@pet.microchip_registry%></p>
+  </div>
+  <div class="health-info-container">
+    <h3>Health Information</h3>
+    <p>Vet Name: <%=@pet.vet_name%></p>
+    <p>Vet Phone: <%=@pet.vet_phone%></p>
+    <p>Vaccinations: <%=@pet.vaccinations%></p>
+    <p>Flea treatment type: <%=@pet.flea_treatment_type%></p>
+    <p>Heartworm treatment type: <%=@pet.heartworm_treatment_type%></p>
+    <p>Allergies: <%=@pet.allergies%></p>
+  </div>
+  <div class="feeding-info-container">
+    <h3>Feeding Information</h3>
+    <p>Food brand: <%=@pet.food_brand%></p>
+    <p>Food serving: <%=@pet.food_serving%></p>
+    <p>Feedings per day: <%=@pet.feedings_per_day%></p>
+    <p>Comments: <%=@pet.comments%></p>
+  </div>
+</div>
 
 
 <p><a class="button" href="/pets/<%=@pet.id%>/edit">Edit <%=@pet.name%>'s info</a></p>
