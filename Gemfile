@@ -8,7 +8,6 @@ gem 'rake'
 gem 'require_all'
 gem 'thin'
 gem 'bcrypt'
-gem 'pg', '0.20'
 gem "tux"
 #gem "sinatra-flash"
 
@@ -23,4 +22,8 @@ group :development do
   gem 'sqlite3', '~> 1.3.6'
   gem 'shotgun'
   gem 'pry'
+end 
+
+group :production do 
+  gem 'pg', '0.20'
 end 
