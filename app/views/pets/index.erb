@@ -28,16 +28,19 @@
       max-height: 920px;
       margin-left: auto;
       margin-right: auto;
+      background: lavender;
+      padding: 20px;
     }
   </style>
 </head>
 
 <div class="title">
   <h1>All your saved pets</h1>
+  <h3>Click on your pet's name to see their profile</h3>
 </div>
 
 <div class="container">
-  <h3>Click on your pet's name to see their profile</h3>
+
   <% @pets.each do |pet| %>
     <p><a href = "/pets/<%= pet.id %>"><%=pet.name%></a></p>
   <p><%end%>
